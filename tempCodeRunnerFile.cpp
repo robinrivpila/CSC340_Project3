@@ -1,0 +1,1 @@
+    locations.addLocation(loc1);
