@@ -26,17 +26,21 @@ void TravelersLocations::addLocation(Location newLoc){
     if(currentLocInx < capacity){
         locations[currentLocInx] = newLoc; 
         
-    }
+    }//NEED TO RESIZE ARRAY IF CAPACITY IS MET
     currentLocInx++; 
 }
 
 float TravelersLocations::calcDistanceBetweenPoints(Location loc1, Location loc2){
-    int xVals = loc1.getX() + loc2.getX();
-    int yVals = loc1.getY()+loc2.getY(); 
+    int xVals = loc2.getX() - loc1.getX(); 
+    int yVals = loc2.getY()-loc1.getY(); 
     int xValsSquared = pow(xVals, 2); 
     int yValsSquared = pow(yVals, 2); 
     float distance = sqrt(xValsSquared+yValsSquared); 
-    return distance; // THIS DOES NOT WORK
+    return distance; 
+}
+
+float calculateTotalDistTraveled(){
+
 }
 
 
