@@ -27,3 +27,5 @@ void Location:: printLoc(){
     cout << "Location Coordinates: " << x << ", " << y << endl; 
 }
 
+
+

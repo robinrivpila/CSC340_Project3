@@ -27,6 +27,10 @@ void TravelersLocations::addLocation(Location newLoc){
         locations[currentLocInx] = newLoc; 
         
     }//NEED TO RESIZE ARRAY IF CAPACITY IS MET
+
+    if(currentLocInx > 0){
+       totalDistanceTraveled += calcDistanceBetweenPoints(locations[currentLocInx], locations[currentLocInx-1]); 
+    }
     currentLocInx++; 
 }
 
@@ -39,8 +43,8 @@ float TravelersLocations::calcDistanceBetweenPoints(Location loc1, Location loc2
     return distance; 
 }
 
-float calculateTotalDistTraveled(){
-
+float TravelersLocations::getTotalDistTraveled(){
+    return totalDistanceTraveled; 
 }
 
 

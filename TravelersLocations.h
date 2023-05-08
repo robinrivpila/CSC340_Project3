@@ -12,7 +12,7 @@ public:
     ~TravelersLocations(); 
     void printLocations(); 
     void addLocation(Location newLoc); 
-    float calculateTotalDistTraveled();
+    float getTotalDistTraveled();
     float calcDistanceBetweenPoints(Location loc1, Location loc2); 
 
 };
