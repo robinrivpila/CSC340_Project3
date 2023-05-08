@@ -8,7 +8,7 @@ using namespace std;
 TravelersLocations::TravelersLocations(){
     currentLocInx = 0; 
     totalDistanceTraveled = 0; 
-    capacity = new int(3); 
+    capacity = new int(10); 
     locations = new Location[*capacity]; 
 }
 

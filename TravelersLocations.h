@@ -9,7 +9,7 @@ private:
     Location* locations; 
 public: 
     TravelersLocations(); 
-    ~TravelersLocations(); 
+    ~TravelersLocations();  
     void printLocations(); 
     void addLocation(Location newLoc); 
     float getTotalDistTraveled();
