@@ -4,7 +4,7 @@
 class TravelersLocations{
 private: 
     int currentLocInx; 
-    int capacity; 
+    int* capacity; 
     float totalDistanceTraveled; 
     Location* locations; 
 public: 
@@ -14,5 +14,6 @@ public:
     void addLocation(Location newLoc); 
     float getTotalDistTraveled();
     float calcDistanceBetweenPoints(Location loc1, Location loc2); 
+    Location* resizeAndCopyArray(int* capacity); 
 
 };

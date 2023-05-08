@@ -8,12 +8,13 @@ using namespace std;
 TravelersLocations::TravelersLocations(){
     currentLocInx = 0; 
     totalDistanceTraveled = 0; 
-    capacity = 30; 
-    locations = new Location[capacity]; 
+    capacity = new int(3); 
+    locations = new Location[*capacity]; 
 }
 
 TravelersLocations:: ~TravelersLocations(){
     delete locations; 
+    delete capacity; 
 }
 
 void TravelersLocations::printLocations(){
@@ -23,10 +24,13 @@ void TravelersLocations::printLocations(){
 }
 
 void TravelersLocations::addLocation(Location newLoc){
-    if(currentLocInx < capacity){
+    if(currentLocInx < *capacity){
         locations[currentLocInx] = newLoc; 
         
-    }//NEED TO RESIZE ARRAY IF CAPACITY IS MET
+    }else{
+        locations = resizeAndCopyArray(capacity); 
+        locations[currentLocInx] = newLoc;
+    }
 
     if(currentLocInx > 0){
        totalDistanceTraveled += calcDistanceBetweenPoints(locations[currentLocInx], locations[currentLocInx-1]); 
@@ -45,6 +49,16 @@ float TravelersLocations::calcDistanceBetweenPoints(Location loc1, Location loc2
 
 float TravelersLocations::getTotalDistTraveled(){
     return totalDistanceTraveled; 
+}
+
+Location* TravelersLocations::resizeAndCopyArray(int* capacity){
+    Location* newLocArr = new Location[*capacity*3]; 
+    *capacity = (*capacity)* 3; 
+    for(int i = 0; i < currentLocInx; i++){
+        newLocArr[i] = locations[i]; 
+    }
+    
+    return newLocArr; 
 }
 
 
