@@ -1,4 +1,4 @@
-#pragma once; 
+#pragma once 
 #include "TravelersLocations.h"
 #include "Location.h"
 #include <iostream>
@@ -10,9 +10,8 @@ private:
     TravelersLocations locations; 
 public:
     Menu();
-    ~Menu(); 
     void mainMenu(); 
     void addNewLoc();
     void showTotalDistance(); 
-    void distanceToLoc(Location location); 
+    void distanceToLoc(); 
 };
