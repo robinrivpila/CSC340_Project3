@@ -10,6 +10,7 @@ private:
     TravelersLocations locations; 
 public:
     Menu();
+    ~Menu(); 
     void mainMenu(); 
     void addNewLoc();
     void showTotalDistance(); 

@@ -9,7 +9,9 @@ private:
     Location* locations; 
 public: 
     TravelersLocations(); 
-    ~TravelersLocations();  
+    ~TravelersLocations(); 
+    Location* getLocations(); 
+    int getCurLocInd(); 
     void printLocations(); 
     void addLocation(Location newLoc); 
     float getTotalDistTraveled();

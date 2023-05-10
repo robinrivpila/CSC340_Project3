@@ -17,6 +17,14 @@ TravelersLocations:: ~TravelersLocations(){
     delete capacity; 
 }
 
+Location* TravelersLocations::getLocations(){
+    return locations; 
+}
+
+int TravelersLocations::getCurLocInd(){
+    return currentLocInx; 
+}
+
 void TravelersLocations::printLocations(){
     for(Location* i = locations; i < locations+currentLocInx; i++){
         (*i).printLoc(); 
