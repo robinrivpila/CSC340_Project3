@@ -68,6 +68,7 @@ void Menu::distanceToLoc(){
     cout << "Please enter the y coordinate: " << endl; 
     int y; 
     cin >> y; 
-    Location mostRecentLoc = locations.getLocations()[locations.getCurLocInd()]; 
-    locations.calcDistanceBetweenPoints(mostRecentLoc, Location(x,y)); 
+    Location mostRecentLoc = locations.getLocations()[locations.getCurLocInd()-1]; 
+    mostRecentLoc.printLoc(); 
+    cout << "Distance to specified location: " << locations.calcDistanceBetweenPoints(mostRecentLoc, Location(x,y)) << endl; 
 }
