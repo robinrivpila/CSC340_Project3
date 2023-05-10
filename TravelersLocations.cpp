@@ -13,7 +13,7 @@ TravelersLocations::TravelersLocations(){
 }
 
 TravelersLocations:: ~TravelersLocations(){
-    delete locations; 
+    delete[] locations; 
     delete capacity; 
 }
 
